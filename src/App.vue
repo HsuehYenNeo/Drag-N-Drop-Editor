@@ -80,7 +80,7 @@ export default {
       if (this.drawerOpen == false) {
         drawer.style.right = "-200px"
         dragArea.style.width = "100%"
-        drawerBtn.style.right = "0px"
+        drawerBtn.style.right = "20px"
         this.drawerOpen = true
       } else {
         drawer.style.right = "20px"
@@ -136,7 +136,7 @@ export default {
       if (proto == false) {
         this.$refs.menu.style.display ="block"
         this.$refs.menu.style.position ="absolute"
-        this.$refs.menu.style.left = (e.pageX+90)+'px'
+        this.$refs.menu.style.left = (e.pageX+120)+'px'
         this.$refs.menu.style.top = (e.pageY-70)+'px'
       }
     },
@@ -181,7 +181,7 @@ body {
   top: 20px;
   background: #092532;
   color: #fff;
-  padding: 10px 15px;
+  padding: 10px 15px 20px 15px;
   text-align: center;
   transition: 0.5s all;
   font-weight: 700;
@@ -192,6 +192,7 @@ body {
   display: none;
   padding: 0 20px 20px 20px;
   border-radius: 4px;
+  background: #fff;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
@@ -203,7 +204,6 @@ body {
   display: flex; 
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.5s;
 }
 .circle {
   position: fixed;
@@ -211,12 +211,14 @@ body {
   width: 100px;
   height: 100px;
   top: 100px;
+  transition: transform 0.5s;
 }
 .square {
   position: fixed;
   width: 100px;
   height: 100px;
   top: 250px;
+  transition: transform 0.5s;
 }
 .leaf {
   position: fixed;
@@ -224,6 +226,7 @@ body {
   height: 100px;
   border-radius: 50% 10%;
   top: 410px;
+  transition: transform 0.5s;
 }
 input {
   width: 80px
